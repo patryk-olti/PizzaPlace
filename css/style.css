@@ -1,0 +1,968 @@
+/*
+    font-family: 'Roboto', sans-serif;
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 200vh;
+    background-color: #eee;
+}
+
+
+/* Navigation */
+nav{
+    width: 100vw;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+nav ul{
+    text-align: right;
+}
+
+nav li{
+    display: inline-block;
+    font-size: 2.4rem;
+    list-style: none;
+}
+
+nav a{
+    position: relative;
+    text-decoration: none;
+    color: darkolivegreen;
+    padding: 20px 30px;
+    line-height: 10vh;
+    margin: 0 10px;
+    text-transform: uppercase;
+}
+
+nav a div{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 0;
+    background-color: darkolivegreen;
+    transition: .2s;
+}
+
+
+nav li:nth-last-of-type(1) a{
+    font-size: 3.4rem;
+    border: 4px solid brown;
+    margin: 0 70px 0 90px;
+    letter-spacing: 2px;
+    transition: .4s;
+}
+
+nav a:hover{
+    color: black;
+}
+
+nav a:hover div{
+    width: 100%;
+}
+
+nav li:hover:nth-last-of-type(1) a{
+    background-color: brown;
+    color: white;
+}
+
+/* Header */
+header{
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    background-image: url("../img/pizza-329523_1920.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+header h1{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    font-size: 8rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: white;
+    background-color: rgba(0,0,0,0.4);
+}
+
+header div.shadow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
+
+header button{
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    font-size: 3.6rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 2px solid black;
+    padding: 20px 40px;
+    cursor: pointer;
+    background-color: rgba(255,255,255,0.4);
+    animation: shake 5s infinite linear;
+}
+
+header button:hover{
+    background-color: rgba(255,255,255,0.6);
+    animation: paused;
+}
+
+/* Information */
+section.information{
+    display: flex;
+    justify-content: space-around;
+    height: 25vh;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+section.information div{
+    width: 30%;
+    text-align: center;
+}
+
+section.information i{
+    font-size: 12rem;
+    margin: 80px auto 50px auto;
+}
+
+section.information h1{
+    font-size: 3.4rem;
+}
+
+section.information p{
+    font-size: 2.8rem;
+    padding: 10px;
+}
+
+/* About */
+section.about{
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    height: 50vh;
+    margin: 100px auto 30px;
+    overflow: hidden;
+    padding: 30px;
+}
+
+section.about div.img{
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    width: 50%;
+    height: 80%;
+    border: 5px solid brown;
+    background-image: url("../img/bar-984527_1280.jpg");
+    background-size: cover;
+}
+
+section.about div.text{
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 50%;
+    height: 60%;
+    padding: 20px;
+    background-color: darkolivegreen;
+}
+
+section.about h1{
+    font-size: 4rem;
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5%;
+    color: white;
+}
+
+section.about p{
+    font-size: 2rem;
+    line-height: 150%;
+    text-align: justify;
+    color: #fff;
+}
+
+/* Galery */
+section.galery{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    width: 100%;
+    max-width: 1400px;
+    min-height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+section.galery a{
+    width: 23%;
+    background-color: darkorange;
+    border: 2px solid brown;
+    cursor: pointer;
+    transition: .4s;
+}
+
+section.galery img{
+    width: 100%;
+    height: 200px;
+}
+
+section.galery div:hover{
+    background-color: rgb(197, 109, 2);
+}
+
+/* Footer */
+footer{
+    background-color: #000;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 200%;
+}
+
+/* Contact Box */
+section.contactBox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+section.contactBox .contact{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70vh;
+    height: 50vh;
+    background-image: url("../img/pizza-744405_640.jpg");
+    background-size: cover;
+    border: 5px solid black;
+    transition: 1s;
+}
+
+section.contactBox .shadow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20%;
+    width: 100%;
+    background-color: black;
+}
+
+section.contactBox p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: 4px;
+    color: white;
+    text-transform: uppercase;
+}
+
+section.contactBox .exit{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 3.5rem;
+    transform: translate(50%,-50%);
+    background-color: black;
+    border: 4px solid white;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+}
+
+section.contactBox.disactive{
+    display: none;
+}
+
+
+/* ....... */
+@media (max-width: 1280px) and (orientation: portrait){
+    nav li{
+        font-size: 2.2rem;
+    }
+
+    nav li:nth-last-of-type(1) a{
+        font-size: 3.2rem;
+        margin: 0 40px 0 60px;
+        border: 4px solid brown;
+    }
+
+    nav a{
+        line-height: 10vh;
+    }
+}
+
+@media (max-width: 1024px) and (orientation: portrait){
+    nav li{
+        font-size: 2.2rem;
+    }
+
+    nav li:nth-last-of-type(1) a{
+        font-size: 3.4rem;
+        margin: 0 50px 0 70px;
+        border: 4px solid brown;
+    }
+
+    nav a{
+        line-height: 10vh;
+    }
+
+    header button{
+        font-size: 5rem;
+        letter-spacing: 2px;
+        padding: 30px 40px;
+    }
+
+    section.about{
+        height: 35vh;
+        margin: 50px auto 30px;
+        padding: 30px;
+    }
+
+    section.about div.text{
+        padding: 20px;
+    }
+
+    section.about h1{
+        font-size: 3rem;
+    }
+
+    section.about p{
+        font-size: 1.6rem;
+        line-height: 150%;
+    }
+
+    section.galery{
+        min-height: 50vh;
+    }
+    
+    section.galery a{
+        width: 30%;
+    }
+
+}
+
+@media (max-width: 768px) and (orientation: portrait){
+    nav li{
+        font-size: 1.8rem;
+    }
+
+    nav li:nth-last-of-type(1) a{
+        font-size: 3.2rem;
+        margin: 0 40px 0 50px;
+        border: 4px solid brown;
+    }
+
+    nav a{
+        line-height: 10vh;
+    }
+
+    header h1{
+        font-size: 6rem;
+        letter-spacing: 4px;
+    }
+
+    section.information h1{
+        font-size: 2.6rem;
+    }
+    
+    section.information p{
+        font-size: 2.2rem;
+        padding: 10px;
+    }
+
+    section.about{
+        margin: 80px auto 30px;
+    }
+
+    section.about h1{
+        font-size: 2.4rem;
+    }
+
+    section.about p{
+        font-size: 1.2rem;
+        line-height: 130%;
+    }
+
+    section.galery{
+        min-height: 70vh;
+    }
+    
+    section.galery a{
+        width: 30%;
+    }
+
+    footer{
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 415px) and (orientation: portrait){
+    nav li{
+        font-size: 1.4rem;
+    }
+
+    nav li:nth-last-of-type(1) a{
+        font-size: 1.6rem;
+        margin: 0 15px 0 25px;
+        border: 2px solid brown;
+    }
+
+    nav a{
+        padding: 10px 10px;
+        line-height: 8vh;
+    }
+
+    header h1{
+        font-size: 5rem;
+        letter-spacing: 4px;
+    }
+
+    header button{
+        font-size: 2rem;
+        letter-spacing: 2px;
+        padding: 15px 30px;
+    }
+
+    section.information i{
+        font-size: 8rem;
+        margin: 40px auto 20px auto;
+    }
+
+    section.information h1{
+        font-size: 1.4rem;
+    }
+    
+    section.information p{
+        font-size: 1.0rem;
+        padding: 10px;
+    }
+
+    section.about{
+        height: 80vh;
+        margin: 10px auto 30px;
+    }
+    
+    section.about div.img{
+        top: 5%;
+        left: 5%;
+        width: 90%;
+        height: 50%;
+    }
+    
+    section.about div.text{
+        top: 50%;
+        left: 10%;
+        width: 80%;
+        height: 60%;
+        padding: 15px;
+    }
+    
+    section.about h1{
+        font-size: 3rem;
+        text-align: center;
+    }
+    
+    section.about p{
+        font-size: 1.4rem;
+        line-height: 150%;
+    }
+
+    section.galery{
+        min-height: 180vh;
+    }
+    
+    section.galery div{
+        width: 45%;
+    }
+
+    footer{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 375px) and (orientation: portrait){
+    nav li{
+        font-size: 1.2rem;
+    }
+
+    nav li:nth-last-of-type(1) a{
+        font-size: 1.4rem;
+        margin: 0 10px 0 25px;
+        letter-spacing: 1px;
+    }
+
+    nav a{
+        padding: 10px 10px;
+        line-height: 8vh;
+    }
+
+    header h1{
+        font-size: 4rem;
+        letter-spacing: 2px;
+    }
+
+    header button{
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+        padding: 15px 30px;
+    }
+
+    section.information i{
+        font-size: 7rem;
+        margin: 40px auto 20px auto;
+    }
+
+    section.information h1{
+        font-size: 1.2rem;
+    }
+    
+    section.information p{
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    section.about p{
+        font-size: 1.2rem;
+        line-height: 150%;
+    }
+
+    section.galery{
+        min-height: 400vh;
+    }
+
+    section.galery div{
+        width: 80%;
+    }
+}
+
+@media (max-width: 320px) and (orientation: portrait){
+    nav li{
+        font-size: 1rem;
+    }
+
+    nav li:nth-last-of-type(1) a{
+        font-size: 1.2rem;
+        margin: 0 10px 0 15px;
+        letter-spacing: 0;
+    }
+
+    nav a{
+        padding: 10px 10px;
+        line-height: 8vh;
+    }
+
+    section.information i{
+        font-size: 5rem;
+    }
+
+    section.information p{
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+
+    section.about h1{
+        font-size: 2.4rem;
+        text-align: center;
+    }
+    
+    section.about p{
+        font-size: 1.1rem;
+        line-height: 130%;
+    }
+
+    
+    section.galery{
+        min-height: 450vh;
+    }
+}
+
+
+/** LANDSAPE **/
+/* ....... */
+@media (max-width: 1366px) and (orientation: landscape){
+    section.about p{
+        font-size: 1.9rem;
+        line-height: 150%;
+    }
+
+    section.galery{
+        min-height: 70vh;
+    }
+
+    section.galery div{
+        width: 23%;
+    }
+}
+
+@media (max-width: 1024px) and (orientation: landscape){
+    nav li{
+        font-size: 2rem;
+    }
+
+    nav li:nth-last-of-type(1) a{
+        font-size: 3.0rem;
+    }
+
+    nav a{
+        line-height: 14vh;
+    }
+
+    section.information{
+        height: 45vh;
+    }
+
+    section.about{
+        height: 55vh;
+        margin: 30px auto 20px;
+    }
+
+    section.about h1{
+        font-size: 3rem;
+    }
+
+    section.about p{
+        font-size: 1.5rem;
+        line-height: 150%;
+    }
+
+    section.galery{
+        min-height: 120vh;
+    }
+    
+    section.galery div{
+        width: 30%;
+    }
+
+}
+
+@media (max-width: 823px) and (orientation: landscape){
+    nav li{
+        font-size: 1.8rem;
+    }
+    
+    nav a{
+        padding: 10px 15px;
+        line-height: 20vh;
+    }
+    
+    nav li:nth-last-of-type(1) a{
+        font-size: 2.4rem;
+        margin: 0 40px 0 50px;
+    }
+
+    header{
+        height: 80vh;
+    }
+    
+    header h1{
+        font-size: 5rem;
+    }
+    
+    header button{
+        bottom: 10%;
+        left: 40%;
+        font-size: 2.2rem;
+    }
+    
+    section.information{
+        height: 70vh;
+    }
+    
+    section.information i{
+        font-size: 8rem;
+        margin: 50px auto 50px auto;
+    }
+    
+    section.information h1{
+        font-size: 2rem;
+    }
+    
+    section.information p{
+        font-size: 2rem;
+    }
+    
+    section.about{
+        height: 150vh;
+        margin: 30px auto 30px;
+        padding: 30px;
+    }
+    
+    section.about div.img{
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+        height: 60%;
+    }
+    
+    section.about div.text{
+        position: absolute;
+        top: 60%;
+        left: 10%;
+        width: 80%;
+        height: 60%;
+    }
+    
+    section.about h1{
+        font-size: 3.6rem;
+        margin-bottom: 2%;
+    }
+    
+    section.about p{
+        font-size: 1.55rem;
+    }
+   
+    section.galery{
+        min-height: 230vh;
+    }
+    
+    section.galery div{
+        width: 30%;
+    }
+}
+
+@media (max-width: 640px) and (orientation: landscape){
+    nav li{
+        font-size: 1.4rem;
+    }
+    
+    nav a{
+        padding: 10px 10px;
+    }
+    
+    nav li:nth-last-of-type(1) a{
+        font-size: 2rem;
+        margin: 0 20px 0 30px;
+    }
+
+    header{
+        height: 80vh;
+    }
+    
+    header h1{
+        font-size: 3rem;
+    }
+    
+    header button{
+        bottom: 10%;
+        left: 60%;
+        font-size: 1.6rem;
+    }
+    
+    section.information{
+        height: 50vh;
+    }
+
+    section.information i{
+        font-size: 6rem;
+        margin: 30px auto 30px auto;
+    }
+    
+    section.information h1{
+        font-size: 1.6rem;
+    }
+    
+    section.information p{
+        font-size: 1.4rem;
+    }
+    
+    section.about{
+        padding: 20px;
+    }
+    
+    section.about h1{
+        font-size: 3.0rem;
+        margin-bottom: 2%;
+    }
+    
+    section.about p{
+        font-size: 1.2rem;
+    }
+   
+    section.galery{
+        min-height: 400vh;
+    }
+    
+    section.galery div{
+        width: 45%;
+    }
+}
+
+@media (max-width: 375px) and (orientation: portrait){
+    nav li{
+        font-size: 1.2rem;
+    }
+
+    nav li:nth-last-of-type(1) a{
+        font-size: 1.4rem;
+        margin: 0 10px 0 25px;
+        letter-spacing: 1px;
+    }
+
+    nav a{
+        padding: 10px 10px;
+        line-height: 8vh;
+    }
+
+    header h1{
+        font-size: 4rem;
+        letter-spacing: 2px;
+    }
+
+    header button{
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+        padding: 15px 30px;
+    }
+
+    section.information i{
+        font-size: 7rem;
+        margin: 40px auto 20px auto;
+    }
+
+    section.information h1{
+        font-size: 1.2rem;
+    }
+    
+    section.information p{
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    section.about p{
+        font-size: 1.2rem;
+        line-height: 150%;
+    }
+
+    section.galery{
+        min-height: 400vh;
+    }
+
+    section.galery div{
+        width: 80%;
+    }
+}
+
+@media (max-width: 320px) and (orientation: portrait){
+    nav li{
+        font-size: 1rem;
+    }
+
+    nav li:nth-last-of-type(1) a{
+        font-size: 1.2rem;
+        margin: 0 10px 0 15px;
+        letter-spacing: 0;
+    }
+
+    nav a{
+        padding: 10px 10px;
+        line-height: 8vh;
+    }
+
+    section.information i{
+        font-size: 5rem;
+    }
+
+    section.information p{
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+
+    section.about h1{
+        font-size: 2.4rem;
+        text-align: center;
+    }
+    
+    section.about p{
+        font-size: 1.1rem;
+        line-height: 130%;
+    }
+
+    
+    section.galery{
+        min-height: 450vh;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes shake{
+    0%{transform: translateX(0);}
+    90%{transform: translateX(0);}
+    91%{transform: translateX(5%);}
+    92%{transform: translateX(-5%);}
+    93%{transform: translateX(5%);}
+    94%{transform: translateX(-5%);}
+    95%{transform: translateX(5%);}
+    96%{transform: translateX(-5%);}
+    97%{transform: translateX(5%);}
+    98%{transform: translateX(-5%);}
+    99%{transform: translateX(5%);}
+    100%{transform: translateX(-5%);}
+}
+
+
+
+
+
+
+
+

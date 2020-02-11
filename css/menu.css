@@ -1,0 +1,338 @@
+body{
+    font-size: 10px;
+    min-height: 100vh;
+}
+
+h2{
+    font-size: 7rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 20px auto 0;
+}
+
+section.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-grow: 1;
+    width: 100vw;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+section.menu div.pizza{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    font-size: 2.2rem;
+}
+
+section.menu div.pizza > *{
+    background-color: rgba(211, 149, 128, .2);
+}
+
+section.menu div.img1{
+    width: 15%;
+    background-image: url("../img/pizza-1442946_640.jpg");
+    background-size: cover;
+    border: 2px solid black;
+}
+
+section.menu h1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    letter-spacing: 2px;
+    width: 20%;
+    margin-left: 5px;
+}
+
+
+section.menu div.pizza p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 2rem;
+    width: 45%;
+    padding: 10px;
+    text-align: center;
+    margin: 0 5px;
+}
+
+section.menu div.pizza p.price{
+    width: 10%;
+    padding: 30px;
+}
+
+section.menu div.pizzaInfo{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+section.menu p.info{
+    width: 10%;
+    text-align: center;
+    color: black;
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+section.menu p.empty{
+    flex-grow: 1;
+}
+
+
+/** respon **/
+
+@media (max-width: 1024px) and (orientation: portrait){
+    h2{
+        font-size: 5rem;
+    }
+
+    section.menu h1{
+        font-size: 3rem;
+    }
+    
+    section.menu div.pizza p{
+        font-size: 1.8rem;
+    }
+    section.menu p.info{
+        width: 8%;
+        font-size: 2.0rem;
+    }
+    section.menu div.pizza p.price{
+        width: 10%;
+        padding: 30px;
+    }
+    section.menu div.pizza p.price{
+        width: 8%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) and (orientation: portrait){
+    h2{
+        font-size: 4.4rem;
+    }
+
+    section.menu h1{
+        font-size: 2.2rem;
+    }
+    
+    section.menu div.pizza p{
+        font-size: 1.6rem;
+    }
+    section.menu p.info{
+        width: 11%;
+        font-size: 1.4rem;
+    }
+    section.menu div.pizza p.price{
+        width: 10%;
+        padding: 5px;
+    }
+    section.menu div.pizza p.price{
+        width: 10%;
+        padding: 20px;
+    }
+}
+
+
+
+@media (max-width: 415px) and (orientation: portrait){
+    h2{
+        font-size: 3rem;
+    }
+    
+    section.menu p.info{
+        width: 10%;
+        font-size: 1rem;
+    }
+    
+    section.menu{
+        min-height: 100vh;
+    }
+    
+    section.menu div.img1{
+        display: none;
+    }
+    
+    section.menu h1{
+        font-size: 1.6rem;
+        width: 30%;
+        margin-left: 5px;
+    }
+    
+    section.menu div.pizza p{
+        font-size: 1.1rem;
+        width: 45%;
+        padding: 5px;
+        margin: 0 2px;
+    }
+    
+    section.menu div.pizza p.price{
+        width: 10%;
+        padding: 5px;
+    }
+}
+
+
+@media (max-width: 375px) and (orientation: portrait){
+    h2{
+        font-size: 2.4rem;
+    }
+    
+    
+    section.menu p.info{
+        width: 11%;
+        font-size: 0.8rem;
+    }
+
+    section.menu h1{
+        font-size: 1.4rem;
+    }
+
+    section.menu{
+        min-height: 120vh;
+    }
+}
+
+@media (max-width: 320px) and (orientation: portrait){
+    section.menu div.pizza p{
+        font-size: 1rem;
+    }
+
+    section.menu{
+        min-height: 130vh;
+    }
+
+    section.menu div.pizza p.price{
+        width: 10%;
+        padding: 1px;
+    }
+}
+
+
+/* LANDSCAPE */
+
+@media (max-width: 1024px) and (orientation: landscape){
+    h2{
+        font-size: 4rem;
+    }
+
+    section.menu h1{
+        font-size: 3rem;
+    }
+    
+    section.menu{
+        min-height: 100vh;
+    }
+
+    section.menu div.pizza p{
+        font-size: 1.8rem;
+    }
+    section.menu p.info{
+        width: 9%;
+        font-size: 1.8rem;
+    }
+    section.menu div.pizza p.price{
+        width: 10%;
+        padding: 30px;
+    }
+    section.menu div.pizza p.price{
+        width: 8%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 823px) and (orientation: landscape){
+    h2{
+        font-size: 3.2rem;
+    }
+
+    section.menu h1{
+        font-size: 2rem;
+    }
+
+    section.menu p.info{
+        width: 8.5%;
+        font-size: 1.6rem;
+    }
+
+    section.menu div.pizza p{
+        font-size: 1.6rem;
+    }
+    
+    section.menu{
+        min-height: 200vh;
+    }
+
+    section.menu div.pizza p.price{
+        padding: 5px;
+    }
+}
+
+
+
+@media (max-width: 736px) and (orientation: landscape){
+    h2{
+        font-size: 2.6rem;
+    }
+
+    section.menu h1{
+        font-size: 1.8rem;
+    }
+
+    section.menu p.info{
+        width: 8.5%;
+        font-size: 1.6rem;
+    }
+
+    section.menu div.pizza p{
+        font-size: 1.4rem;
+    }
+    
+    section.menu{
+        min-height: 200vh;
+    }
+
+    section.menu div.pizza p.price{
+        padding: 5px;
+    }
+}
+
+
+@media (max-width: 640px) and (orientation: landscape){
+    h2{
+        font-size: 2.4rem;
+    }
+
+    section.menu h1{
+        font-size: 1.4rem;
+    }
+
+    section.menu p.info{
+        width: 9%;
+        font-size: 1.2rem;
+    }
+
+    section.menu div.pizza p{
+        font-size: 1.2rem;
+    }
+    
+    section.menu{
+        min-height: 240vh;
+    }
+
+    section.menu div.pizza p.price{
+        padding: 5px;
+    }
+}
